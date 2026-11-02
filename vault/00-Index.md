@@ -31,7 +31,7 @@ tags: [index, moc]
 
 ## 04 · Planning
 - [[Status]]
-- Implementation plan — *dibuat setelah PRD disetujui*
+- [[Implementation-Plan]] — work package multi-agent & kontrak antar-modul fase 1
 
 ## 05 · Decisions (ADR)
 - [[ADR-0001]] Fokus masalah & scope MVP
@@ -51,6 +51,7 @@ tags: [index, moc]
 
 ## 07 · Knowledge
 - [[Free-Tier-Limits]] — batasan Gemini, Nominatim, Supabase, Vercel (dengan sumber & confidence)
+- [[Supabase-Gotchas]] — grant default, column grant, realtime DELETE, test RLS tanpa Docker
 
 ## Templates
 - `_templates/ADR.md`, `_templates/Dev-Log.md`, `_templates/Feature.md`
