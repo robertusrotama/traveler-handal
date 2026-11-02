@@ -57,3 +57,7 @@ next-env.d.ts
 
 # Python
 __pycache__/
+
+# Supabase CLI lokal
+supabase/.branches
+supabase/.temp
