@@ -1,0 +1,49 @@
+# Konfigurasi Supabase CLI untuk `supabase start` lokal. Secret hanya lewat env().
+project_id = "traveler-handal"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 17
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[realtime]
+enabled = true
+
+[studio]
+enabled = true
+port = 54323
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/auth/callback"]
+jwt_expiry = 3600
+enable_signup = true
+# Guest join tanpa akun (ADR-0004)
+enable_anonymous_sign_ins = true
+# Wajib untuk "Amankan akunku" (linkIdentity guest → Google)
+enable_manual_linking = true
+
+# Turnstile saat sign-in anonim. Aktifkan setelah secret tersedia.
+[auth.captcha]
+enabled = false
+provider = "turnstile"
+secret = "env(SUPABASE_AUTH_CAPTCHA_SECRET)"
+
+# Google OAuth. Aktifkan setelah client id/secret tersedia.
+[auth.external.google]
+enabled = false
+client_id = "env(SUPABASE_AUTH_EXTERNAL_GOOGLE_CLIENT_ID)"
+secret = "env(SUPABASE_AUTH_EXTERNAL_GOOGLE_SECRET)"
+redirect_uri = ""
+skip_nonce_check = false

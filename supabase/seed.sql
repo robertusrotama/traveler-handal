@@ -1,0 +1,1 @@
+-- Seed lokal (supabase db reset). Data produksi wajib (mis. rate_limits) ada di migration.
