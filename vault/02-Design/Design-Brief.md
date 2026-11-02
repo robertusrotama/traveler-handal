@@ -1,16 +1,16 @@
 ---
 title: Design Brief
-status: waiting-for-input
+status: partial
 updated: 2026-11-02
 tags: [design]
 ---
 
 # Design Brief
 
-> **Status: menunggu input user.** Jangan bangun UI final sebelum referensi visual diterima. Scaffold teknis & komponen fungsional boleh memakai shadcn/ui default.
+> **Referensi visual sudah diterima (2026-11-02):** design system Airbnb dengan primary biru → [[Design-System]], [[ADR-0010]]. Skill desain (poin 2) masih menunggu.
 
 ## Menunggu dari user
-1. **Referensi visual** (screenshot/link app atau situs yang disukai, mood, warna, tipografi). → simpan di `02-Design/references/` dan rangkum di sini.
+1. ~~Referensi visual~~ → **selesai**: [[airbnb-DESIGN]] (asli) + [[Design-System]] (override proyek).
 2. **Skill desain yang diminta:** "UI UX Pro Max" dan "Ponytail". Keduanya **tidak tersedia** di session per 2026-11-02 (dicek di skill terpasang, katalog skill, dan katalog plugin). Butuh link repo/sumber resmi → dibaca dulu, lalu dipasang di `.claude/skills/` repo ini.
    - Alternatif yang tersedia di katalog: plugin resmi Anthropic **frontend-design** (belum diaktifkan).
 

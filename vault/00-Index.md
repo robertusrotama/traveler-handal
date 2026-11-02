@@ -17,7 +17,9 @@ tags: [index, moc]
 - [[Roadmap]] — fase MVP → fase 2 → nanti
 
 ## 02 · Design
-- [[Design-Brief]] — menunggu referensi visual dari user; skill desain yang diminta
+- [[Design-System]] — token & aturan UI (basis Airbnb, primary biru)
+- [[Design-Brief]] — layar MVP, input desain yang masih ditunggu
+- [[airbnb-DESIGN]] — referensi asli dari getdesign (jangan diedit)
 
 ## 03 · Architecture
 - [[Tech-Stack]] — stack, struktur repo, library
@@ -41,6 +43,7 @@ tags: [index, moc]
 - [[ADR-0007]] Konkurensi: last-write-wins per baris
 - [[ADR-0008]] Klaim ulang identitas butuh persetujuan owner; masa berlaku link
 - [[ADR-0009]] Knowledge base di Obsidian vault dalam repo
+- [[ADR-0010]] Design system: referensi Airbnb, primary biru, font Inter
 
 ## 06 · Dev Log
 - [[2026-11-02]] — brainstorming & PRD

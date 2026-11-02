@@ -13,12 +13,13 @@ tags: [planning, status]
 ## Selesai
 - [x] Brainstorming: masalah, akses hybrid, prioritas MVP, platform, stack, provider gratis, desain 4 bagian (scope, AI planner, data model, auth & keamanan)
 - [x] Vault + CLAUDE.md + PRD + catatan arsitektur + ADR-0001..0009
+- [x] Referensi desain Airbnb (primary biru) → [[Design-System]], ADR-0010
 
 ## Berikutnya
 1. User me-review [[PRD]] dan catatan arsitektur → revisi bila perlu.
 2. Setelah disetujui: susun **implementation plan** (milestone & task) di `04-Planning/`.
 3. User memilih cara eksekusi plan.
-4. Menunggu dari user (tidak memblokir plan, memblokir UI final): referensi visual, link skill desain — lihat [[Design-Brief]].
+4. Menunggu dari user (tidak memblokir): link skill desain — lihat [[Design-Brief]].
 
 ## Blocker / menunggu user
 - Review PRD

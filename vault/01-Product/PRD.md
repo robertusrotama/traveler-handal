@@ -209,13 +209,13 @@ Prioritas: **P0** = wajib untuk rilis MVP, **P1** = masuk MVP bila waktu cukup.
 | Supabase project ter-pause menjelang trip | Sedang | Cron keep-alive (belum terbukti), checklist cek H-7, data tidak hilang saat pause |
 | Penyamaran member via link | Rendah (MVP) / Tinggi (fase 2) | Klaim ulang butuh persetujuan owner, opsi tautkan Google, reset link |
 | Pelanggaran kebijakan Nominatim → IP diblokir | Sedang | Rate limiter global berbasis DB, cache, User-Agent jelas, tanpa autocomplete |
-| Desain UI terasa generik | Sedang | Tunggu referensi visual user + skill desain yang diminta ([[Design-Brief]]) |
+| Desain UI terasa generik / kosong tanpa foto | Sedang | Design system berbasis Airbnb ([[Design-System]]); pengganti foto: ikon kategori, peta, blok warna |
 
 ## 12. Open questions
 
 | ID | Pertanyaan | Status |
 |---|---|---|
-| OQ-1 | Referensi visual/desain dari user | Menunggu user |
+| OQ-1 | Referensi visual/desain dari user | Selesai: [[Design-System]] / [[ADR-0010]] |
 | OQ-2 | Sumber skill "UI UX Pro Max" dan "Ponytail" (link repo) | Menunggu user |
 | OQ-3 | Bahasa UI: Bahasa Indonesia saja (asumsi saat ini) atau dwibahasa? | Asumsi: Indonesia saja |
 | OQ-4 | Ada trip nyata dengan tanggal tertentu yang jadi deadline MVP? | Belum dijawab |

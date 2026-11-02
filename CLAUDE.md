@@ -23,5 +23,5 @@ Aplikasi web (PWA) perencanaan perjalanan pribadi: AI menyusun draft itinerary, 
 - Jangan pernah mengirim data pribadi member (nama, email, catatan) ke provider AI — lihat [[ADR-0005]] / `vault/03-Architecture/AI-Planner.md`.
 - Semua secret (service role Supabase, API key AI) hanya di server / env var. Tidak boleh ada di bundle client.
 - Semua tabel Supabase wajib RLS + test RLS.
-- Desain UI: tunggu referensi visual dari user (lihat `vault/02-Design/Design-Brief.md`) sebelum membangun UI final.
+- Desain UI: ikuti `vault/02-Design/Design-System.md` (basis Airbnb, primary biru, font Inter); referensi asli di `vault/02-Design/references/`.
 - Branch kerja & alur git mengikuti instruksi session.
