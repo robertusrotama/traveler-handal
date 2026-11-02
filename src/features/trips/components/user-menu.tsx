@@ -44,7 +44,7 @@ export function UserMenu({ user }: { user: User }) {
         <DropdownMenuLabel className="flex flex-col gap-0.5">
           <span className="text-title-sm text-ink">{name}</span>
           {!user.is_anonymous && user.email && <span className="truncate">{user.email}</span>}
-          {user.is_anonymous && <span>Sesi tamu di perangkat ini</span>}
+          {user.is_anonymous && <span className="max-w-60">Sesi tamu. Setelah keluar, masuk lagi lewat link undangan.</span>}
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem

@@ -45,9 +45,10 @@ tags: [index, moc]
 - [[ADR-0009]] Knowledge base di Obsidian vault dalam repo
 - [[ADR-0010]] Design system: referensi Airbnb, primary biru, font Inter
 - [[ADR-0011]] Skill proyek: ponytail (landasan kode) & ui-ux-pro-max (UI)
+- [[ADR-0012]] Fitur AI ditunda dari rilis fase 1 pertama
 
 ## 06 · Dev Log
-- [[2026-11-02]] — brainstorming & PRD
+- [[2026-11-02]] — brainstorming, PRD, implementasi W1 (multi-agent)
 
 ## 07 · Knowledge
 - [[Free-Tier-Limits]] — batasan Gemini, Nominatim, Supabase, Vercel (dengan sumber & confidence)
