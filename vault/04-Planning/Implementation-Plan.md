@@ -78,6 +78,19 @@ Next.js 16.4.4 (App Router, `src/`, `proxy.ts` menggantikan middleware, `cacheCo
 - W2-ITIN memakai komponen di atas di halaman trip; data trip dimuat via TanStack Query + invalidasi dari Realtime.
 - W2-PLATFORM mengekspor `@/features/offline`: `saveTripSnapshot(tripId, data)`, `loadTripSnapshot(tripId)`, `useOnline()`; W2-ITIN memanggilnya.
 
+## Hasil gelombang 1 — koreksi kontrak (WAJIB dibaca gelombang 2)
+- `serverEnv()` ada di `@/lib/env.server` (bukan `@/lib/env`). `@/features/ai` & `@/features/places` (index) **server-only**; komponen client mengimpor `@/features/ai/prompts`, `@/features/ai/context`, `@/features/ai/quota`, `@/lib/schemas/*` langsung.
+- Error RPC: `error.message` = kode stabil (`invalid_dates`, `invite_invalid`, `access_revoked`, `forbidden`, `claim_expired`, `claimant_already_member`, …), `error.hint` = teks Indonesia untuk ditampilkan.
+- **Kirim hanya kolom yang berubah** pada update (column-level grant; lihat [[Supabase-Gotchas]]). Tanggal trip hanya via `update_trip_dates`.
+- `trip_members` SELECT juga mengembalikan baris milik sendiri yang sudah dicabut → client mendeteksi "dicabut" (juga via Realtime) dan mengarahkan ke `/revoked`.
+- `profiles`: user hanya bisa melihat profilnya sendiri → nama member diambil dari `trip_members.display_name`.
+- `create_trip`: `p_interests_note`, `p_pace`, `p_budget_level` opsional. `rebalance_positions(p_trip_id, p_day_id default null)`.
+- `positionBetween(undefined, after)` = `after − 1024`. `verification_status='verified'` wajib punya `place_id`.
+- `AiError.message` aman ditampilkan. Fake: instruksi berisi `paksa-gagal` → FakeGenerator gagal `upstream`; query berisi `tidak-ada` → FakeVerifier null.
+- Gemini: backoff 429 s.d. ±14 dtk + timeout 40 dtk → route AI wajib `export const maxDuration` (cek batas Vercel Hobby).
+- Test yang mengimpor modul `server-only` perlu `vi.mock("server-only", () => ({}))`.
+- Realtime DELETE hanya membawa PK → refetch.
+
 ## Aturan untuk semua agent
 - Baca `CLAUDE.md`, skill `ponytail` (`.claude/skills/ponytail/SKILL.md`), dan untuk UI: [[Design-System]] + `.claude/skills/ui-ux-pro-max/references/pro-rules.md`.
 - Next.js 16 berbeda dari ingatan: baca `node_modules/next/dist/docs/` sebelum memakai API Next.
