@@ -18,7 +18,7 @@ tags: [index, moc]
 
 ## 02 · Design
 - [[Design-System]] — token & aturan UI (basis Airbnb, primary biru)
-- [[Design-Brief]] — layar MVP, input desain yang masih ditunggu
+- [[Design-Brief]] — layar MVP (input desain lengkap)
 - [[airbnb-DESIGN]] — referensi asli dari getdesign (jangan diedit)
 
 ## 03 · Architecture
@@ -44,6 +44,7 @@ tags: [index, moc]
 - [[ADR-0008]] Klaim ulang identitas butuh persetujuan owner; masa berlaku link
 - [[ADR-0009]] Knowledge base di Obsidian vault dalam repo
 - [[ADR-0010]] Design system: referensi Airbnb, primary biru, font Inter
+- [[ADR-0011]] Skill proyek: ponytail (landasan kode) & ui-ux-pro-max (UI)
 
 ## 06 · Dev Log
 - [[2026-11-02]] — brainstorming & PRD

@@ -25,3 +25,9 @@ Aplikasi web (PWA) perencanaan perjalanan pribadi: AI menyusun draft itinerary, 
 - Semua tabel Supabase wajib RLS + test RLS.
 - Desain UI: ikuti `vault/02-Design/Design-System.md` (basis Airbnb, primary biru, font Inter); referensi asli di `vault/02-Design/references/`.
 - Branch kerja & alur git mengikuti instruksi session.
+
+## Skill proyek (`.claude/skills/`) — lihat [[ADR-0011]]
+
+- **ponytail** — landasan SEMUA pekerjaan kode (level `full`): perubahan terkecil yang lengkap, YAGNI, pakai yang sudah ada, tanpa abstraksi yang tidak diminta, balasan singkat. Tidak boleh memangkas: validasi di trust boundary, keamanan/RLS, aksesibilitas, test logika non-trivial, dan apa pun yang diwajibkan PRD/ADR. Antarmuka `ItineraryGenerator` & `PlaceVerifier` adalah keputusan yang disengaja ([[ADR-0005]]), bukan abstraksi berlebih.
+- **ui-ux-pro-max** — untuk setiap pekerjaan UI: pakai pencarian `--domain` (ux, icons, typography, ...) dan `--stack nextjs` / `--stack shadcn`, serta checklist `references/pro-rules.md` sebelum menyerahkan UI. **Jangan** jalankan `--design-system` / `--persist`: sumber kebenaran desain adalah `vault/02-Design/Design-System.md`. Hasil pencarian = rekomendasi, kalah oleh Design-System, PRD, dan ADR.
+- Urutan prioritas bila bertentangan: instruksi user > CLAUDE.md/PRD/ADR > skill.

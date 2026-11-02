@@ -216,7 +216,7 @@ Prioritas: **P0** = wajib untuk rilis MVP, **P1** = masuk MVP bila waktu cukup.
 | ID | Pertanyaan | Status |
 |---|---|---|
 | OQ-1 | Referensi visual/desain dari user | Selesai: [[Design-System]] / [[ADR-0010]] |
-| OQ-2 | Sumber skill "UI UX Pro Max" dan "Ponytail" (link repo) | Menunggu user |
+| OQ-2 | Sumber skill "UI UX Pro Max" dan "Ponytail" (link repo) | Selesai: terpasang di `.claude/skills/` ([[ADR-0011]]) |
 | OQ-3 | Bahasa UI: Bahasa Indonesia saja (asumsi saat ini) atau dwibahasa? | Asumsi: Indonesia saja |
 | OQ-4 | Ada trip nyata dengan tanggal tertentu yang jadi deadline MVP? | Belum dijawab |
 | OQ-5 | Perilaku "generate ulang seluruh trip": pertahankan aktivitas manual/terdit (asumsi) atau timpa semua? | Asumsi: pertahankan |

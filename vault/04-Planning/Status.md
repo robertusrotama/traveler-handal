@@ -19,8 +19,8 @@ tags: [planning, status]
 1. User me-review [[PRD]] dan catatan arsitektur → revisi bila perlu.
 2. Setelah disetujui: susun **implementation plan** (milestone & task) di `04-Planning/`.
 3. User memilih cara eksekusi plan.
-4. Menunggu dari user (tidak memblokir): link skill desain — lihat [[Design-Brief]].
+4. Skill proyek terpasang: ponytail & ui-ux-pro-max ([[ADR-0011]]).
 
 ## Blocker / menunggu user
 - Review PRD
-- OQ-1..OQ-5 di [[PRD]]
+- OQ-3..OQ-5 di [[PRD]]
