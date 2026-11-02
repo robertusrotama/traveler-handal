@@ -8,19 +8,17 @@ tags: [planning, status]
 # Status Proyek
 
 ## Fase saat ini
-**Spec review** — PRD & arsitektur ditulis, menunggu review user.
+**Fase 1 (MVP) — implementasi.** User meminta membangun kode fase 1 dari PRD (2026-11-02), yang dianggap sebagai persetujuan PRD v0.1. Asumsi OQ-3 (UI Indonesia saja) dan OQ-5 (pertahankan aktivitas manual/terdit) berlaku.
+
+Rencana & kontrak antar-modul: [[Implementation-Plan]].
 
 ## Selesai
-- [x] Brainstorming: masalah, akses hybrid, prioritas MVP, platform, stack, provider gratis, desain 4 bagian (scope, AI planner, data model, auth & keamanan)
-- [x] Vault + CLAUDE.md + PRD + catatan arsitektur + ADR-0001..0009
-- [x] Referensi desain Airbnb (primary biru) → [[Design-System]], ADR-0010
+- [x] Brainstorming, PRD, arsitektur, ADR-0001..0011, design system
+- [x] Scaffold Next.js 16 + dependensi
 
-## Berikutnya
-1. User me-review [[PRD]] dan catatan arsitektur → revisi bila perlu.
-2. Setelah disetujui: susun **implementation plan** (milestone & task) di `04-Planning/`.
-3. User memilih cara eksekusi plan.
-4. Skill proyek terpasang: ponytail & ui-ux-pro-max ([[ADR-0011]]).
+## Sedang dikerjakan
+- [ ] Gelombang 1: W1-DB, W1-UI, W1-CORE
+- [ ] Gelombang 2: W2-TRIPS, W2-ITIN, W2-MEMBERS, W2-AI, W2-PLATFORM
 
 ## Blocker / menunggu user
-- Review PRD
-- OQ-3..OQ-5 di [[PRD]]
+- OQ-4 (deadline trip nyata) belum dijawab.
