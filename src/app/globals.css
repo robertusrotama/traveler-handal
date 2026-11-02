@@ -1,26 +1,192 @@
 @import "tailwindcss";
 
+/*
+ * Token Traveler Handal — sumber: vault/02-Design/Design-System.md (override) + references/airbnb-DESIGN.md (basis).
+ * Hanya mode terang di MVP; dark mode nanti cukup mendefinisikan ulang variabel :root di bawah.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand */
+  --primary: #2563eb;
+  --primary-active: #1d4ed8;
+  --primary-disabled: #bfdbfe;
+  --primary-soft: #eff6ff;
+  --on-primary: #ffffff;
+
+  /* Teks */
+  --ink: #222222;
+  --body: #3f3f3f;
+  --muted: #6a6a6a;
+  --muted-soft: #929292;
+
+  /* Garis */
+  --hairline: #dddddd;
+  --hairline-soft: #ebebeb;
+  --border-strong: #c1c1c1;
+
+  /* Permukaan */
+  --canvas: #ffffff;
+  --surface-soft: #f7f7f7;
+  --surface-strong: #f2f2f2;
+  --scrim: #000000; /* dipakai dengan opasitas 50%: bg-scrim/50 */
+
+  /* Semantik */
+  --error: #c13515;
+  --error-hover: #b32505;
+  --verified: #15803d;
+  --verified-bg: #f0fdf4;
+  --unverified: #b45309;
+  --unverified-bg: #fffbeb;
+  --manual: var(--muted);
+  --manual-bg: var(--surface-soft);
+
+  /* Alias kompatibel shadcn/ui */
+  --background: var(--canvas);
+  --foreground: var(--ink);
+  --border: var(--hairline);
+  --ring: var(--primary);
+  --radius: 8px;
 }
 
 @theme inline {
+  --color-primary: var(--primary);
+  --color-primary-active: var(--primary-active);
+  --color-primary-disabled: var(--primary-disabled);
+  --color-primary-soft: var(--primary-soft);
+  --color-on-primary: var(--on-primary);
+  --color-ink: var(--ink);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-muted-soft: var(--muted-soft);
+  --color-hairline: var(--hairline);
+  --color-hairline-soft: var(--hairline-soft);
+  --color-border-strong: var(--border-strong);
+  --color-canvas: var(--canvas);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-strong: var(--surface-strong);
+  --color-scrim: var(--scrim);
+  --color-error: var(--error);
+  --color-error-hover: var(--error-hover);
+  --color-verified: var(--verified);
+  --color-verified-bg: var(--verified-bg);
+  --color-unverified: var(--unverified);
+  --color-unverified-bg: var(--unverified-bg);
+  --color-manual: var(--manual);
+  --color-manual-bg: var(--manual-bg);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  --font-sans:
+    var(--font-inter), Inter, -apple-system, system-ui, Roboto,
+    "Helvetica Neue", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  /* Satu-satunya tier shadow: kartu saat hover, search bar, dropdown. */
+  --shadow-card:
+    rgba(0, 0, 0, 0.02) 0 0 0 1px, rgba(0, 0, 0, 0.04) 0 2px 6px 0,
+    rgba(0, 0, 0, 0.1) 0 4px 8px 0;
+
+  /* Tipografi: skala referensi; line-height display dikurangi ±2% untuk Inter. */
+  --text-display-xl: 28px;
+  --text-display-xl--line-height: 1.4;
+  --text-display-xl--font-weight: 700;
+  --text-display-lg: 22px;
+  --text-display-lg--line-height: 1.16;
+  --text-display-lg--letter-spacing: -0.44px;
+  --text-display-lg--font-weight: 500;
+  --text-display-md: 21px;
+  --text-display-md--line-height: 1.4;
+  --text-display-md--font-weight: 700;
+  --text-display-sm: 20px;
+  --text-display-sm--line-height: 1.18;
+  --text-display-sm--letter-spacing: -0.18px;
+  --text-display-sm--font-weight: 600;
+  --text-title-md: 16px;
+  --text-title-md--line-height: 1.25;
+  --text-title-md--font-weight: 600;
+  --text-title-sm: 16px;
+  --text-title-sm--line-height: 1.25;
+  --text-title-sm--font-weight: 500;
+  --text-body-md: 16px;
+  --text-body-md--line-height: 1.5;
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 1.43;
+  --text-caption: 14px;
+  --text-caption--line-height: 1.29;
+  --text-caption--font-weight: 500;
+  --text-caption-sm: 13px;
+  --text-caption-sm--line-height: 1.23;
+  --text-badge: 11px;
+  --text-badge--line-height: 1.18;
+  --text-badge--font-weight: 600;
+
+  --animate-fade-in: fade-in 150ms ease-out;
+  --animate-pop-in: pop-in 150ms ease-out;
+  --animate-slide-up: slide-up 200ms ease-out;
+  --animate-slide-in-right: slide-in-right 200ms ease-out;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes pop-in {
+    from {
+      opacity: 0;
+      transform: scale(0.97);
+    }
+  }
+  @keyframes slide-up {
+    from {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(100%);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  a {
+    color: var(--primary);
+  }
+
+  /* Ring fokus hanya untuk keyboard. */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
