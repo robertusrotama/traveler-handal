@@ -1,0 +1,15 @@
+# Obsidian — state UI per perangkat, jangan di-commit
+vault/.obsidian/workspace.json
+vault/.obsidian/workspace-mobile.json
+vault/.obsidian/cache
+.obsidian/workspace*.json
+.trash/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
